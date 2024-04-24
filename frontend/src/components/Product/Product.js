@@ -50,6 +50,7 @@ function Product({ product }) {
           <div className="badge badge-outline capitalize">{product.type}</div>
           <div className="badge badge-outline">Products</div>
         </div>
+        <div className="card-actions justify-center"></div>
       </div>
     </div>
   );
