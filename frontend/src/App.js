@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 
 function App() {
   /* React Router Configuration */
@@ -13,6 +14,10 @@ function App() {
         {
           index: true,
           element: <Home />,
+        },
+        {
+          path: ":id",
+          element: <ProductDetail />,
         },
         // {
         //   path: "add",

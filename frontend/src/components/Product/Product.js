@@ -1,6 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 function Product({ product }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`${product.id}`);
+  };
+
   return (
-    <div className="card w-60 bg-base-300 shadow-xl glass cursor-pointer mb-8 mr-5">
+    <div
+      className="card w-60 bg-base-300 shadow-xl glass cursor-pointer mb-8 mr-5"
+      onClick={handleClick}
+    >
       <figure>
         {/* <ImageMagnifier src={product.image[0]} /> */}
         <img
