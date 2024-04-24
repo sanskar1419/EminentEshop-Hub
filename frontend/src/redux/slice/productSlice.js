@@ -27,10 +27,15 @@ const productSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getAllProductsAsync.fulfilled, (state, action) => {
-      state.products = [...action.payload];
-      state.loading = false;
-    });
+    builder
+      .addCase(getAllProductsAsync.fulfilled, (state, action) => {
+        state.products = [...action.payload];
+        state.loading = false;
+      })
+      .addCase(getAllProductsAsync.rejected, (state, action) => {
+        state.error = "Something went wrong";
+        state.loading = false;
+      });
   },
 });
 
@@ -38,3 +43,4 @@ export const productReducer = productSlice.reducer;
 export const productActions = productSlice.actions;
 
 export const getProducts = (state) => state.product.products;
+export const getLoading = (state) => state.product.loading;

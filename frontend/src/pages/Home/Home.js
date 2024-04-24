@@ -2,12 +2,16 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getAllProductsAsync,
+  getLoading,
   getProducts,
   productActions,
 } from "../../redux/slice/productSlice";
+import GridLoader from "react-spinners/GridLoader";
+import Products from "../../components/Products/Products";
 
 function Home() {
   const dispatch = useDispatch();
+  const loading = useSelector(getLoading);
 
   /* Getting all todos on component mounting */
   useEffect(() => {
@@ -18,9 +22,19 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <>
+      {loading ? (
+        <div className="loader">
+          <GridLoader color="green" />
+        </div>
+      ) : (
+        <div className="flex mt-4 text-3xl flex-col justify-center items-center mb-8">
+          {/* <h1 className="font-extrabold mb-4">List Of All Products</h1> */}
+          {/* Rendering the TodoList component */}
+          <Products />
+        </div>
+      )}
+    </>
   );
 }
 
