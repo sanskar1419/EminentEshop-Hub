@@ -9,15 +9,15 @@ function Product({ product }) {
 
   return (
     <div
-      className="card w-60 bg-base-300 shadow-xl glass cursor-pointer mb-8 mr-5"
+      className="card w-60 bg-slate-900 shadow-xl glass cursor-pointer mb-8 mr-5"
       onClick={handleClick}
     >
-      <figure>
+      <figure className="mix-blend-multiply">
         {/* <ImageMagnifier src={product.image[0]} /> */}
         <img
           src={product.image[0]}
           alt="product"
-          className="h-60 w-full m-auto"
+          className="h-60 w-full m-auto mix-blend-lighten"
         />
       </figure>
       <div className="card-body">
