@@ -172,7 +172,44 @@ function ProductDetail() {
             </>
           )}
         </div>
-        <div className="border-2 border-slate-400 w-2/6 h-72"></div>
+        <div className="border-2 border-slate-400 w-2/6 p-2 rounded h-56">
+          <h1>
+            <span className="text-xs"> &#8377; </span>
+            <span className="text-xl font-medium">{product.price}</span>
+          </h1>
+          <div
+            className="badge badge-ghost font-semibold mb-1 text-xs"
+            style={{ fontSize: "0.51rem", padding: "1px 10px" }}
+          >
+            ECom Fulfilled
+          </div>
+          <div className="" style={{ fontSize: "0.51rem" }}>
+            <span className=" text-sky-800">FREE delivery</span>{" "}
+            <span>{new Date().toDateString()}</span> on orders dispatched by
+            E-Com Service over ₹499. Order within{" "}
+            <span className="text-green-700">23 hrs 51 mins.</span>
+          </div>
+          <div className="text-green-700 font-semibold">In Stock</div>
+          <div className="flex w-full" style={{ fontSize: "0.51rem" }}>
+            <div className="w-2/4">Ship From</div>
+            <div className="w-2/4">E-Com Service</div>
+          </div>
+          <div className="flex w-full" style={{ fontSize: "0.51rem" }}>
+            <div className="w-2/4">Sold By</div>
+            <div className="w-2/4">{product.Brand}</div>
+          </div>
+          <div style={{ fontSize: "0.8rem" }} className="font-bold mb-3">
+            Quantity : 1
+          </div>
+          <div className="w-full flex justify-center items-center">
+            <button
+              className="btn btn-warning text-md font-extrabold badge rounded-full w-11/12"
+              style={{ height: "2rem", minHeight: "2rem" }}
+            >
+              Add To Cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
