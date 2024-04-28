@@ -1,7 +1,17 @@
 import { useState } from "react";
 import hintImg from "../../images/lightbulb.png";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addNewProductAsync,
+  getProducts,
+  productActions,
+} from "../../redux/slice/productSlice";
+import { useNavigate } from "react-router-dom";
 
 function AddForm() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const products = useSelector(getProducts);
   const [inputs, setInputs] = useState({
     title: "",
     rating: 0,
@@ -91,8 +101,120 @@ function AddForm() {
     additionalValue10: "",
   });
 
+  const dataCorrection = () => {
+    return;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    /* Validation */
+    if (inputs.mrp <= 0) {
+      dispatch(productActions.setError("MRP should be grater then 0."));
+      return;
+    }
+
+    if (inputs.price <= 0 || inputs.price >= inputs.mrp) {
+      dispatch(
+        productActions.setError(
+          "Price should be grater then 0 and it should be less then MRP"
+        )
+      );
+      return;
+    }
+
+    const imageList = [];
+    const productDescriptionList = [];
+    Object.keys(images).forEach((key) => {
+      if (images[key] !== "") {
+        imageList.push(images[key]);
+      }
+    });
+    Object.keys(description).forEach((key) => {
+      if (description[key] !== "") {
+        productDescriptionList.push(description[key]);
+      }
+    });
+
+    let productDetail = {
+      [detailKey.detailKey1]: detailValue.detailValue1,
+      [detailKey.detailKey2]: detailValue.detailValue2,
+      [detailKey.detailKey3]: detailValue.detailValue3,
+      [detailKey.detailKey4]: detailValue.detailValue4,
+      [detailKey.detailKey5]: detailValue.detailValue5,
+      [detailKey.detailKey6]: detailValue.detailValue6,
+      [detailKey.detailKey7]: detailValue.detailValue7,
+      [detailKey.detailKey8]: detailValue.detailValue8,
+      [detailKey.detailKey9]: detailValue.detailValue9,
+      [detailKey.detailKey10]: detailValue.detailValue10,
+    };
+
+    productDetail = Object.keys(productDetail)
+      .filter((objKey) => objKey !== "")
+      .reduce((newObj, key) => {
+        newObj[key] = productDetail[key];
+        return newObj;
+      }, {});
+
+    let additionalDetails = {
+      [additionalKey.additionalKey1]: additionalValue.additionalValue1,
+      [additionalKey.additionalKey2]: additionalValue.additionalValue2,
+      [additionalKey.additionalKey3]: additionalValue.additionalValue3,
+      [additionalKey.additionalKey4]: additionalValue.additionalValue4,
+      [additionalKey.additionalKey5]: additionalValue.additionalValue5,
+      [additionalKey.additionalKey6]: additionalValue.additionalValue6,
+      [additionalKey.additionalKey7]: additionalValue.additionalValue7,
+      [additionalKey.additionalKey8]: additionalValue.additionalValue8,
+      [additionalKey.additionalKey9]: additionalValue.additionalValue9,
+      [additionalKey.additionalKey10]: additionalValue.additionalValue10,
+    };
+
+    additionalDetails = Object.keys(additionalDetails)
+      .filter((objKey) => objKey !== "")
+      .reduce((newObj, key) => {
+        newObj[key] = additionalDetails[key];
+        return newObj;
+      }, {});
+
+    setInputs({
+      ...inputs,
+      image: [...imageList],
+      description: [...productDescriptionList],
+      rating: Math.floor(Math.random() * (5 - 0 + 1)) + 0,
+      Review: Math.floor(Math.random() * (150 - 20 + 1)) + 20,
+      details:
+        Object.keys(productDetail).length === 0 ? null : { ...productDetail },
+      additional:
+        Object.keys(additionalDetails).length === 0
+          ? null
+          : { ...additionalDetails },
+    });
+
+    dispatch(productActions.fetchStart());
+    dispatch(
+      addNewProductAsync({
+        title: inputs.title,
+        mrp: inputs.mrp,
+        price: inputs.price,
+        Brand: inputs.Brand,
+        type: inputs.type,
+        image: [...imageList],
+        description: [...productDescriptionList],
+        rating: Math.floor(Math.random() * (5 - 0 + 1)) + 0,
+        Review: Math.floor(Math.random() * (150 - 20 + 1)) + 20,
+        details:
+          Object.keys(productDetail).length === 0 ? null : { ...productDetail },
+        additional:
+          Object.keys(additionalDetails).length === 0
+            ? null
+            : { ...additionalDetails },
+      })
+    );
+    navigate("/");
+  };
+
   return (
-    <form className="w-5/6">
+    <form className="w-5/6" onSubmit={handleSubmit}>
       {/* Title Inputs ................................. */}
       <label className="form-control w-full max-w-full mb-5">
         <div className="font-extrabold text-base mb-2 flex items-center justify-between">
@@ -113,6 +235,8 @@ function AddForm() {
           // On input change setting the input title
           value={inputs.title}
           onChange={(e) => setInputs({ ...inputs, title: e.target.value })}
+          oninvalid="this.setCustomValidity('Please Enter valid email')"
+          required
         />
       </label>
       {/* MRP Inputs ................................. */}
@@ -136,6 +260,7 @@ function AddForm() {
           // On input change setting the input MRP
           value={inputs.mrp}
           onChange={(e) => setInputs({ ...inputs, mrp: e.target.value })}
+          required
         />
       </label>
       {/* Price input .................................................. */}
@@ -158,6 +283,7 @@ function AddForm() {
           value={inputs.price}
           onChange={(e) => setInputs({ ...inputs, price: e.target.value })}
           className="input input-bordered input-success w-full max-w-full"
+          required
         />
       </label>
       {/*  Brand Input .....................................................  */}
@@ -179,6 +305,7 @@ function AddForm() {
           className="input input-bordered input-success w-full max-w-full"
           value={inputs.Brand}
           onChange={(e) => setInputs({ ...inputs, Brand: e.target.value })}
+          required
         />
       </label>
       {/* Type Input .................................................... */}
@@ -198,6 +325,7 @@ function AddForm() {
           className="select select-success w-full max-w-full"
           value={inputs.type}
           onChange={(e) => setInputs({ ...inputs, type: e.target.value })}
+          required
         >
           <option disabled selected value={""}>
             Pick the type of product
@@ -229,6 +357,7 @@ function AddForm() {
           className="input input-bordered input-primary w-full max-w-full mb-1"
           value={images.image1}
           onChange={(e) => setImages({ ...images, image1: e.target.value })}
+          required
         />
         <input
           type="url"
@@ -294,6 +423,7 @@ function AddForm() {
           onChange={(e) =>
             setDescription({ ...description, para1: e.target.value })
           }
+          required
           className="input input-bordered input-warning w-full max-w-full mb-1"
         />
         <input
@@ -409,7 +539,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue1}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue1: e.target.value })
+              setDetailValue({ ...detailValue, detailValue1: e.target.value })
             }
           />
         </div>
@@ -431,7 +561,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue2}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue2: e.target.value })
+              setDetailValue({ ...detailValue, detailValue2: e.target.value })
             }
           />
         </div>
@@ -452,7 +582,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue3}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue3: e.target.value })
+              setDetailValue({ ...detailValue, detailValue3: e.target.value })
             }
           />
         </div>
@@ -473,7 +603,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue4}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue4: e.target.value })
+              setDetailValue({ ...detailValue, detailValue4: e.target.value })
             }
           />
         </div>
@@ -494,7 +624,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue5}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue5: e.target.value })
+              setDetailValue({ ...detailValue, detailValue5: e.target.value })
             }
           />
         </div>
@@ -515,7 +645,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue6}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue6: e.target.value })
+              setDetailValue({ ...detailValue, detailValue6: e.target.value })
             }
           />
         </div>
@@ -536,7 +666,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue7}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue7: e.target.value })
+              setDetailValue({ ...detailValue, detailValue7: e.target.value })
             }
           />
         </div>
@@ -557,7 +687,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue8}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue8: e.target.value })
+              setDetailValue({ ...detailValue, detailValue8: e.target.value })
             }
           />
         </div>
@@ -578,7 +708,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue9}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue9: e.target.value })
+              setDetailValue({ ...detailValue, detailValue9: e.target.value })
             }
           />
         </div>
@@ -599,7 +729,7 @@ function AddForm() {
             className="input input-bordered input-secondary w-5/12 mb-1"
             value={detailValue.detailValue10}
             onChange={(e) =>
-              setDetailKey({ ...detailValue, detailValue10: e.target.value })
+              setDetailValue({ ...detailValue, detailValue10: e.target.value })
             }
           />
         </div>
@@ -889,7 +1019,10 @@ function AddForm() {
         </div>
       </label>
       <div className="w-full flex justify-center items-center">
-        <button className="btn btn-active btn-primary w-3/12 font-extrabold text-lg">
+        <button
+          className="btn btn-active btn-primary w-3/12 font-extrabold text-lg"
+          type="submit"
+        >
           Add Product
         </button>
       </div>

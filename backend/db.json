@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Haier 190 L 4 Star Direct Cool Single Door Refrigerator Appliance (2023 Model, HED-204DS-P, Dazzle Steel)",
       "rating": 4.1,
       "mrp": 20990,
@@ -37,7 +37,7 @@
       "additional": null
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)",
       "rating": 4.1,
       "mrp": 17500,
@@ -73,7 +73,7 @@
       "additional": null
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Titan Smart Smartwatch with Stress & Sleep Monitor, SpO2,Women Health Monitor,5 ATM Water Resistance & Upto 14 Days Battery Life",
       "rating": 3.6,
       "mrp": 14995,
@@ -103,7 +103,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Fastrack FS1 Pro Smartwatch | 1.96 inch Super AMOLED Arched Display with High Resolution of 410X502 | Singlesync BT Calling | Nitrofast Charging|110+ Sports Modes | 200+ Watchfaces",
       "rating": 4.1,
       "mrp": 7995,
@@ -136,7 +136,7 @@
       "additional": null
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "FUR JADEN Anti Theft Number Lock Backpack Bag with 15.6 Inch Laptop Compartment, USB Charging Port & Organizer Pocket for Men Women Boys Girls",
       "rating": 4.2,
       "mrp": 2000,
@@ -173,7 +173,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Moccasin EM-02 Men's Casual Shoes",
       "rating": 4,
       "mrp": 4000,
@@ -210,7 +210,7 @@
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Campus Men's OXYFIT (N) Walking Shoes",
       "rating": 4.1,
       "mrp": 999,
@@ -251,7 +251,7 @@
       }
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Amazon Brand - Solimo Water Bottle, Spill-Proof, Ergonomic, Safe For Refrigerator, Freezer And Dishwasher (Stainless Steel, Set Of 3, 2 Red And 1 Blue), 1 liter",
       "rating": 4.1,
       "mrp": 1499,
@@ -289,7 +289,7 @@
       "additional": null
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Amazon Brand - Solimo Diamond Water Bottles, Spill-Proof, 3.2 Cm Neck, Firm Grip (Set of 6, 1 L Each, 3 Smoke and 3 Sea Green)",
       "rating": 4.4,
       "mrp": 699,
@@ -327,7 +327,7 @@
       "additional": null
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Amazon Brand - Solimo Garden Slide - Blue & Grey | Safe & Fun Indoor/Outdoor Toy | Ideal for Boys/Girls - 2 -4 years.",
       "rating": 4.2,
       "mrp": 5900,
@@ -360,7 +360,7 @@
       "additional": null
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Imagimake: Mapology India and World Maps with Capitals - Learn Capitals and Country Flags - Educational Toy for Kids Above 5 Years, Multicolor",
       "rating": 4.5,
       "mrp": 1099,
@@ -386,7 +386,7 @@
       "additional": null
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Shining Diva Fashion Latest Stylish Design Fancy Pearl Choker Traditional Temple Necklace Jewellery Set for Women (14822s) (Golden)",
       "rating": 3.8,
       "mrp": 2995,
@@ -425,7 +425,7 @@
       }
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Amazon Brand - Symbol Women's Quilted Jacket",
       "rating": 4,
       "mrp": 3599,
@@ -466,7 +466,7 @@
       }
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "GoSriKi Women's Cotton Blend Embroidered Straight Kurta with Pant & Dupatta",
       "rating": 3.9,
       "mrp": 2599,
@@ -505,7 +505,7 @@
       }
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "BIOMUNI Ayurvedic & Natural Creamy Matte Lip Hydrating & Moisturizing Minis Lipsticks Set for Women | Jojoba, Castor and Rosemary Oil With Vitamin E | Proudly the Biggest Mini Lipstick Combo Pack",
       "rating": 4.6,
       "mrp": 745,
@@ -547,7 +547,7 @@
       }
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Apple iPhone 13 (128GB) - Blue",
       "rating": 4.6,
       "mrp": 59900,
@@ -589,7 +589,7 @@
       }
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Peter England Men's Polyester Blend Two Piece Suit (PISUSNSF331973_Black",
       "rating": 4.2,
       "mrp": 8999,
@@ -623,7 +623,7 @@
       }
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Lee Men's Fleece Lined Relaxed Fit Straight Leg Jean, Dark Wash, 36W X 32L",
       "rating": 4.5,
       "mrp": 9999,
@@ -641,13 +641,15 @@
         "Pattern": "Solid",
         "Country of Origin": "USA"
       },
-      "description": ["Fit Type: Relaxed"],
+      "description": [
+        "Fit Type: Relaxed"
+      ],
       "additional": {
         "Item Weight": "998 g"
       }
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Nikon D7500 20.9MP Digital SLR Camera (Black) with AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR Lens",
       "rating": 4.4,
       "mrp": 94950,
@@ -718,6 +720,44 @@
         "Country Of Origin:China, India"
       ],
       "additional": null
+    },
+    {
+      "id": "7ace",
+      "title": "Redmi Buds 5 Truly Wireless Bluetooth Ear Buds (TWS) with Upto 46dB Hybrid Noise Cancellation, Dual-Mic AI Call Enhancement,10mins for 4Hours Fast Charging with Upto 38Hrs Playback| Fusion White",
+      "mrp": "4999",
+      "price": "2996",
+      "Brand": "Redmi",
+      "type": "electronic",
+      "image": [
+        "https://m.media-amazon.com/images/I/51Af03TfaUL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/71yn7VVWZiL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/71zjRnJ69lL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/71RDtemFEvL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/71jWXt4TXEL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/814lo+hDaFL._SX569_.jpg"
+      ],
+      "description": [
+        "[46dB Hybrid Active Noise Cancellation]: The Redmi Buds 5 comes with Hybrid Active Noise Cancellation which means experience undisturbed audio with up to 46dB noise cancellation that blocks out 99.5% of background noise.",
+        "[12.4mm Titanium Driver]: Experience unparalleled audio with a 1.6m dynamic coil, robust neodymium magnet, and sizable 12.4mm Dynamic Titanium-coated Drivers. Crafted for exceptional clarity, depth, and detail, these drivers redefine your earbud audio.",
+        "[4 pre-set audio modes]: Standard, Enhance Bass, Enhance Treble, Enhance Voice. Listen to your music as you want them. Change these audio modes from the Xiaomi Earbuds app.",
+        "[Dual-mic AI Voice Enhancement for Calls]: Redmi Buds 5 uses a self-developed dual-channel AI algorithm that can withstand 6m/s wind noise. The two microphones work together to effectively filter out wind noise whether riding or running.",
+        "[Up to 38 hours of Playback]: Unleash the beats and break free with earbuds that groove for up to 38 hours. A marathon of music, calls, and limitless energy – all in the palm of your ears.",
+        "[Quick Charge]: In a rush and didn't want to leave your music behind? Quick charge for 5 Minutes gives you up to 2hrs of Playtime and 10 Minutes gives you up to 4hrs of Playtime.",
+        "[Dual-device Pairing]: Seamlessly connect two devices with your earbuds—switch effortlessly to answer a call while watching a movie on your laptop. Enable dual connection from the Xiaomi Earbuds app.",
+        "[Bluetooth 5.3 & Google Fast Pair]: Better connectivity and increased range with the latest Bluetooth 5.3 and get one tap connect as soon as you open the flat with Google Fast Pair.",
+        "[Xiaomi Earbuds App]: Get the personalised experience by setting up the Redmi Buds 5 as per your will. Gesture Control, Ear tip fit Test, In-ear detection, Find your earphones.",
+        "[How to connect the earbuds?] Open the flap of the Redmi Buds 5, keep the earbuds intact in the case, and press & hold the side button on the right until the bar light in the case starts to blink. Connect through Bluetooth and the Xiaomi Earbuds for the best experience."
+      ],
+      "rating": 4,
+      "Review": 41,
+      "details": {
+        "Brand": "\tRedmi",
+        "Model Name": "Buds 5",
+        "Colour": "Fusion White",
+        "Form Factor": "In Ear",
+        "Connectivity Technology": "Wireless"
+      },
+      "additional": null
     }
   ],
   "user": [
@@ -726,7 +766,8 @@
       "username": "John1419",
       "name": "John Doe",
       "password": "123456",
-      "cart": []
+      "cart": [],
+      "id": "229b"
     }
   ]
 }
