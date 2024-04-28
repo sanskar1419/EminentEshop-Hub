@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import AddProduct from "./pages/NewProduct/AddProduct";
+import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 
 function App() {
   /* React Router Configuration */
@@ -23,6 +24,10 @@ function App() {
         {
           path: "add",
           element: <AddProduct />,
+        },
+        {
+          path: "update/:id",
+          element: <UpdateProduct />,
         },
         // {
         //   path: "update",

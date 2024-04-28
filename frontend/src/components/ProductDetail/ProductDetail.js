@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../redux/slice/productSlice";
 import ImageMagnifier from "../ImageMagnifier/ImageMagnifier";
-import { backgroundRemoval } from "@cloudinary/url-gen/actions/effect";
 import replacementImg from "../../images/replacement.png";
 import freeDeliveryImg from "../../images/free-delivery.png";
 import topBrandImg from "../../images/brand-image.png";

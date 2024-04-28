@@ -1,45 +1,8 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "Haier 190 L 4 Star Direct Cool Single Door Refrigerator Appliance (2023 Model, HED-204DS-P, Dazzle Steel)",
-      "rating": 4.1,
-      "mrp": 20990,
-      "price": 14790,
-      "Brand": "Haier",
-      "Review": 87,
-      "image": [
-        "https://m.media-amazon.com/images/I/51fBESl4S1L._SX679_.jpg",
-        "https://m.media-amazon.com/images/I/71g9g+8CYlL._SX466_.jpg",
-        "https://m.media-amazon.com/images/I/714QJQIkebL._SX466_.jpg",
-        "https://m.media-amazon.com/images/I/71zoHNWQ1mL._SX466_.jpg"
-      ],
-      "type": "electronic",
-      "details": {
-        "Product Dimensions": "62.8D x 54.1W x 121.8H Centimeters",
-        "Brand": "Haier",
-        "Capacity": "190 litres",
-        "Configuration": "Freezer-on-Top",
-        "Energy Star": "4 Star"
-      },
-      "description": [
-        "Direct-cool Refrigerator: Economical and Stylish with External Bar Handle.",
-        "Capacity 190 Litres: Suitable for families with 2 to 3 members or bachelors | Freezer Capacity: 14 Ltr , Fresh Food Capacity: 176 Ltr",
-        "Energy Rating: 4 Stars - High Energy Efficiency",
-        "Manufacturer Warranty: 1 year on product, 10 years on compressor.",
-        "Non Inverter Technology",
-        "Storage or Interior description : Fresh food capacity : 176 Ltr | Freezer capacity : 14 Ltr |drawers : 1, shelves : 3| Shelf Type : Toughened Glass | Large vegitable box | Anti-bacterial gasket | Base stand with Drawer for additional space for non-refrigerated food items",
-        "Special Features: Stabilizer Free Operation, Large Vegetable Box, Toughened Glass Shelves, Energy Efficient, More Chiller Space, Anti-Bacterial Gasket, External Handle, Connect Home Inverter, Clean Back",
-        "1 Hour Icing Technology: Get ice within just an hour with 1 Hour Icing Technology (HIT) in this direct cool refrigerator.",
-        "Item Dimensions:62.8x54.1x121.8(LxWxH) | Weight : 35Kg",
-        "Included in the box: 1 Refrigerator Unit, Egg Tray, Ice Tray, User Manual, Warranty Card, Keys"
-      ],
-      "additional": null
-    },
-    {
-      "id": "2",
       "title": "Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)",
-      "rating": 4.1,
+      "rating": "4.2",
       "mrp": 17500,
       "price": 12590,
       "Brand": "Godrej",
@@ -70,37 +33,8 @@
         "Included in the box: 1 Refrigerator and Manual",
         "Recess Handle: This aesthetically designed refrigerator door is equipped with a recess handle."
       ],
-      "additional": null
-    },
-    {
-      "id": "3",
-      "title": "Titan Smart Smartwatch with Stress & Sleep Monitor, SpO2,Women Health Monitor,5 ATM Water Resistance & Upto 14 Days Battery Life",
-      "rating": 3.6,
-      "mrp": 14995,
-      "price": 11995,
-      "Brand": "Titan",
-      "Review": 46,
-      "image": [
-        "https://m.media-amazon.com/images/I/51biSoaDdtL._SX679_.jpg",
-        "https://m.media-amazon.com/images/I/518Z0Hlr6RL._SX522_.jpg"
-      ],
-      "type": "electronic",
-      "details": null,
-      "description": [
-        "AMOLED Display that will leave you awestruck.",
-        "Pro at turning heads, with 5 colour options to match your vibe.",
-        "14 Day* Battery Life. Charge and forget for two weeks.",
-        "SPO2 Monitor to track your oxygen level, all from your wrist",
-        "Period Tracker to ensure there are no surprises on your first day"
-      ],
-      "additional": {
-        "Country of Origin": "China",
-        "Manufacturer": "Titan, Titan Company Ltd, 3 Sipcot Industrial Complex, Hosur - 635126; Telephone : +91-(0)4344-664199",
-        "Packer": "Titan Company Ltd, 3 Sipcot Industrial Complex, Hosur - 635126; Telephone : +91-(0)4344-664199",
-        "Item Dimensions LxWxH": "43 x 11 x 46 Millimeters",
-        "Included Components": "Watch | Strap | Charger | Welcome Card",
-        "Generic Name": "Smart Watch"
-      }
+      "additional": null,
+      "id": "2"
     },
     {
       "id": "4",
@@ -248,78 +182,6 @@
         "Item Dimensions LxWxH": "30.5 x 21.5 x 11.2 Centimeters",
         "Net Quantity": "1 Set",
         "Generic Name": "Walking Shoes"
-      }
-    },
-    {
-      "id": "11",
-      "title": "Amazon Brand - Solimo Garden Slide - Blue & Grey | Safe & Fun Indoor/Outdoor Toy | Ideal for Boys/Girls - 2 -4 years.",
-      "rating": 4.2,
-      "mrp": 5900,
-      "price": 2299,
-      "Brand": "Amazon Brand - Solimo",
-      "Review": 42,
-      "image": [
-        "https://m.media-amazon.com/images/I/71hKDIfuBGL._SX355_.jpg",
-        "https://m.media-amazon.com/images/I/61ycrBC2Z4L._SX355_.jpg",
-        "https://m.media-amazon.com/images/I/61H2ZoaCyhL._SY450_.jpg",
-        "https://m.media-amazon.com/images/I/91bV8fdr3DL._SY355_.jpg",
-        "https://m.media-amazon.com/images/I/71XkqAFlZ-L._SX355_.jpg"
-      ],
-      "type": "Accessories",
-      "details": {
-        "Size": "Blue & Grey"
-      },
-      "description": [
-        "Freestanding indoor/outdoor slide for kids’ playtime",
-        "Made using virgin plastic for sturdiness and durability",
-        "Tested for 72 different parameters (as per IS- 9873 ) for safety and performance at NABL accredited and BIS recognized lab",
-        "Bureau of Indian Standards (BIS) IS-9873 compliant quality product making it safe to use for kids",
-        "Extended buffer zone for a comfortable and safe halt",
-        "Rounded corners offer extra safety and prevents accidental scraping",
-        "Made in India; comes with a manual and is easy to assemble",
-        "Ideal for kids from 3+ years with weight up to 35 kgs",
-        "Product Dimensions:- Length: 139.7 (55 inches), Width: 62.23 (24.5 inches), Height: 85.09 cm (33.5 inches); Weight: 4.600 Kilograms",
-        "Package Contents:- Solimo Garden Slide (Includes 2 Side Panels, 1 Slider, 3 Steps, 1 Basketball Ring with net, 9 Nuts)"
-      ],
-      "additional": null
-    },
-    {
-      "id": "15",
-      "title": "GoSriKi Women's Cotton Blend Embroidered Straight Kurta with Pant & Dupatta",
-      "rating": 3.9,
-      "mrp": 2599,
-      "price": 679,
-      "Brand": "GoSriKi",
-      "Review": 10,
-      "image": [
-        "https://m.media-amazon.com/images/I/61SgADmAyDL._SY550_.jpg",
-        "https://m.media-amazon.com/images/I/61i-0w3GztL._SY550_.jpg",
-        "https://m.media-amazon.com/images/I/61ILnUNj20L._SY550_.jpg",
-        "https://m.media-amazon.com/images/I/61cbXgQUMWL._SY550_.jpg",
-        "https://m.media-amazon.com/images/I/61JMC9I80ZL._SY550_.jpg"
-      ],
-      "type": "women",
-      "details": {
-        "Material composition": "Cotton Blend",
-        "Sleeve type": "3/4 Sleeve",
-        "Neck style": "Round Neck",
-        "Length": "Calf Length",
-        "Material type": "Cotton Blend",
-        "Country of Origin": "India"
-      },
-      "description": [
-        "Kurta Set Fabric: Cotton Blend || Kurta Set Color :- Blue",
-        "Style: Straight || Length: Calf Length || Sleeves: 3/4 Sleeves || Size Chart- Kurta-S-36 in, M-38 in , L-40 in , XL-42 in , XXL-44 in,Pant :- S-28 in, M-30 in , L-32 in, XL- 34 in , XXL- 36 in,For More Please refer to the size Chart below.",
-        "This set includes: 1 Kurta and 1 Pant with Dupatta || Work :- Embroidered || Neck Style:- Round Neck",
-        "Colour Declaration : There might be slight variation in the actual color of the product due to different screen resolutions.",
-        "Ocassion: Traditional wear, Casual Wear, party wear, evening wear,Please Click On Brand Name GoSriKi For More Products."
-      ],
-      "additional": {
-        "Manufacturer": "GoSriKi",
-        "Item Weight": "320 g",
-        "Item Dimensions LxWxH": "28 x 22 x 2 Centimeters",
-        "Net Quantity": "1 Set",
-        "Generic Name": "Kurta with Pant & Dupatta"
       }
     },
     {
@@ -500,6 +362,45 @@
         "Connectivity Technology": "Wireless"
       },
       "additional": null
+    },
+    {
+      "id": "1a17",
+      "title": "Red Lemon Swiss Cut Design 15.6 Inch Smart Laptop Backpack Bag With USB Charging Port, Anti Theft Pocket and Accessories Organiser for Men Women Boys Girls",
+      "mrp": "3999",
+      "price": "1798",
+      "Brand": "Red Lemon Swiss",
+      "type": "Bags",
+      "image": [
+        "https://m.media-amazon.com/images/I/61o3NqZ+13L._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/91P-JH+PnXL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/71Y4CX865BL._SY550_.jpg",
+        "https://m.media-amazon.com/images/I/71zaICd0iCL._SY550_.jpg",
+        "https://m.media-amazon.com/images/I/71ziNStnBnL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/918dV3iHEzL._SX522_.jpg"
+      ],
+      "description": [
+        "PREMIUM MATERIAL: This multifunctional bag is made of quality Water Repellent polyester material in black color to protect your goods from water. For the inner lining, soft feel premium polyester is used. The hardware such as strengthened hooks, zippers and buckles used are wear resistant, smooth, and durable.",
+        "LARGE CAPACITY : Comes with 2 compartments with one separate cushioned laptop sleeve to hold 15. 6 inch Laptop. Additional front zipper pockets with an organiser to store magazine, pens, key,music, cosmetic, pen, charger, powerbank, cable etc. Side pockets for water bottles,umbrella. Back hidden anti theft pocket can hold your wallet,phone,etc",
+        "TROLLEY STRAP & CONVENIENCE : The insertible pull rod box design allows the bag to slide over the luggage handle for easy mobility during traveling. Comfortable airflow back ergonomics design with soft padding, gives you maximum back support. Breathable and adjustable shoulder straps relieve the stress of shoulder. Foam padded top handle for a long time carry on.",
+        "ONE YEAR WARRANTY: 1-year warranty on this bag against any manufacturing defects. Just keep your documents safe. Contact Red Lemon for any issues regarding the product and a resolution will be provided.; Lining texture: polyester",
+        "Pattern Name: Solid; Special Features: Laptop Compartment; Age Range Description: Adult"
+      ],
+      "rating": 2,
+      "Review": 29,
+      "details": {
+        "Colour": "Black"
+      },
+      "additional": {
+        "Country of Origin": "China",
+        "Manufacturer": "Encon Impex Pvt Ltd, Encon impex pvt ltd",
+        "Packer": "Encon Impex pvt ltd",
+        "Importer": "Encon Impex pvt ltd",
+        "Item Weight": "840 g",
+        "Item Dimensions LxWxH": "16 x 30 x 45 Centimeters",
+        "Net Quantity": "26 Liters",
+        "Included Components": "Laptop Sleeve",
+        "Generic Name": "Laptop Backpack"
+      }
     }
   ],
   "user": [

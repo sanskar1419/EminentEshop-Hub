@@ -26,7 +26,9 @@ function Product({ product }) {
     dispatch(deleteProductAsync(product.id));
   };
 
-  const handleEdit = () => {};
+  const handleEdit = () => {
+    navigate(`update/${product.id}`);
+  };
 
   const handleHover = (index) => {
     setHoverProductIndex(index);

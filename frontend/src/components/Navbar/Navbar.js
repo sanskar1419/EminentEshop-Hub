@@ -23,14 +23,14 @@ function Navbar() {
       setTimeout(() => {
         /* Dispatching a action to reset message */
         dispatch(productActions.resetMessage());
-      }, 2000);
+      }, 3000);
     }
     /* If error exist */
     if (error) {
       setTimeout(() => {
         /* Dispatching a action to reset error */
         dispatch(productActions.resetError());
-      }, 2000);
+      }, 3000);
     }
   }, [message, error]);
 
