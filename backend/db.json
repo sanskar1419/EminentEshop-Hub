@@ -401,6 +401,39 @@
         "Included Components": "Laptop Sleeve",
         "Generic Name": "Laptop Backpack"
       }
+    },
+    {
+      "id": "fe7b",
+      "title": "Samsung 28L, Convection Microwave Oven with Curd Making(MC28A5013AK/TL, Black)",
+      "mrp": "15589",
+      "price": "11589",
+      "Brand": "Samsung",
+      "type": "electronic",
+      "image": [
+        "https://m.media-amazon.com/images/I/71MCCZu4TLL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/713bb0rZ14L._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/81rss4bXbXL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/81O7DJ-W+iL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/71QEC1UJZxL._SX522_.jpg"
+      ],
+      "description": [
+        "Capacity 28L : Suitable for large families",
+        "Convection Microwave Oven: Can be used for baking along with grilling, reheating, defrosting and cooking",
+        "Manufacturer Warranty: 1 year standard warranty on Product, 10 years warranty on ceramic enamel cavity",
+        "Control : Touch Key Pad (Membrane) is sensitive to touch and easy to clean",
+        "Programs : Auto Reheat/Cook, Indian Recipe, Dough Proof/Curd, Convection, Grill, Microwave, Power Defrost, Combi (Convection + Grill), Combi (Convection + Microwave), Child Lock, Turntable On/Off, Deodorisation, Clock, Eco Mode, 30 sec +",
+        "Special Features : Various Cooking Mode, Convection Temperature (40~200 â„ƒ), Preheat, Clock, Auto Programs, Auto Cook, Sound on/off, Ceramic Enamel Cavity"
+      ],
+      "rating": 4,
+      "Review": 77,
+      "details": {
+        " Brand": "Samsung",
+        "Product Dimensions": "47.5D x 51.7W x 31H Centimeters",
+        "Colour": "Black",
+        "Capacity": "28 litres",
+        "Special Feature": "Auto Cook, One Touch Button, Defrost, Grill Function, Child Safety Lock, Turntable, Racks, Eco Mode"
+      },
+      "additional": null
     }
   ],
   "user": [

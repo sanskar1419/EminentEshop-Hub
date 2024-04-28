@@ -35,7 +35,7 @@ function ProductDetail() {
       </div>
       <div className="w-3/6 flex justify-around text-black overflow-y-scroll no-scrollbar">
         <div className="w-3/5 font-bold text-justify h-screen flex-col">
-          <h1 className="mb-2 font-mono">{product.title}</h1>
+          <h1 className="mb-2 font-mono text-left">{product.title}</h1>
 
           <div className="stats bg-emerald-400">
             <div className="stat">

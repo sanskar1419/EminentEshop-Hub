@@ -29,9 +29,9 @@ function Home() {
         </div>
       ) : (
         <div className="flex mt-4 text-3xl flex-col justify-center items-center mb-8">
-          <h1 className="font-extrabold mb-4 text-emerald-600">
-            List Of All Products
-          </h1>
+          <div className="font-extrabold mb-4 text-emerald-600 relative w-full flex items-center justify-center">
+            List Of All Products{" "}
+          </div>
           {/* Rendering the TodoList component */}
           <Products />
         </div>
