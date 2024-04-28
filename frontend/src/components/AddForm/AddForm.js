@@ -3,15 +3,18 @@ import hintImg from "../../images/lightbulb.png";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addNewProductAsync,
+  getLoading,
   getProducts,
   productActions,
 } from "../../redux/slice/productSlice";
 import { useNavigate } from "react-router-dom";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 function AddForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const products = useSelector(getProducts);
+  const loading = useSelector(getLoading);
+
   const [inputs, setInputs] = useState({
     title: "",
     rating: 0,
@@ -1019,12 +1022,16 @@ function AddForm() {
         </div>
       </label>
       <div className="w-full flex justify-center items-center">
-        <button
-          className="btn btn-active btn-primary w-3/12 font-extrabold text-lg"
-          type="submit"
-        >
-          Add Product
-        </button>
+        {loading ? (
+          <PropagateLoader color="blue" />
+        ) : (
+          <button
+            className="btn btn-active btn-primary w-3/12 font-extrabold text-lg"
+            type="submit"
+          >
+            Add Product
+          </button>
+        )}
       </div>
     </form>
   );
