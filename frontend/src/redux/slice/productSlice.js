@@ -35,6 +35,19 @@ export const addNewProductAsync = createAsyncThunk(
   }
 );
 
+/* Creating a deleteTodoAsync function that accepts a Redux action type string and a callback function that is return a promise. */
+export const deleteProductAsync = createAsyncThunk(
+  "product/delete",
+  async (payload, thunkAPI) => {
+    /* Making DELETE API Call to */
+    const response = await fetch(`http://localhost:3000/products/${payload}`, {
+      method: "DELETE",
+    });
+    /* Returning the promise */
+    return await response.json();
+  }
+);
+
 const productSlice = createSlice({
   name: "product",
   initialState,
@@ -71,6 +84,18 @@ const productSlice = createSlice({
       .addCase(addNewProductAsync.rejected, (state, action) => {
         console.log(action.payload);
         state.error = "Unable To Add Product";
+        state.loading = false;
+      })
+      .addCase(deleteProductAsync.fulfilled, (state, action) => {
+        const productIndex = state.products.findIndex(
+          (p) => action.payload.id == p.id
+        );
+        state.products.splice(productIndex, 1);
+        state.message = `🙌🙌 Product(${action.payload.title}) has been deleted successfully`;
+        state.loading = false;
+      })
+      .addCase(deleteProductAsync.rejected, (state, action) => {
+        state.error = `😔😔 Unable to delete product(${action.payload.title})`;
         state.loading = false;
       });
   },

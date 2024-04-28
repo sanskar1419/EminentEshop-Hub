@@ -2,9 +2,18 @@ import { useNavigate } from "react-router-dom";
 import deleteImg from "../../images/delete-product.png";
 import editImg from "../../images/pencil.png";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  deleteProductAsync,
+  getLoading,
+  productActions,
+} from "../../redux/slice/productSlice";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function Product({ product }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const loading = useSelector(getLoading);
   const [showButton, setShowButton] = useState(false);
   const [hoverProductIndex, setHoverProductIndex] = useState(0);
 
@@ -12,7 +21,10 @@ function Product({ product }) {
     navigate(`${product.id}`);
   };
 
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    dispatch(productActions.fetchStart());
+    dispatch(deleteProductAsync(product.id));
+  };
 
   const handleEdit = () => {};
 
@@ -94,7 +106,13 @@ function Product({ product }) {
               className="w-3/6 flex items-center justify-center bg-red-300 rounded-br-xl"
               onClick={handleDelete}
             >
-              Delete <img src={deleteImg} className="w-5 ml-2" />
+              {loading ? (
+                <BeatLoader color="black" />
+              ) : (
+                <>
+                  Delete <img src={deleteImg} className="w-5 ml-2" />
+                </>
+              )}
             </div>
           </div>
         ) : null}
