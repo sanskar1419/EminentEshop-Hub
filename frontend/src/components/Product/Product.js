@@ -1,18 +1,38 @@
 import { useNavigate } from "react-router-dom";
+import deleteImg from "../../images/delete-product.png";
+import editImg from "../../images/pencil.png";
+import { useState } from "react";
 
 function Product({ product }) {
   const navigate = useNavigate();
+  const [showButton, setShowButton] = useState(false);
+  const [hoverProductIndex, setHoverProductIndex] = useState(0);
 
   const handleClick = () => {
     navigate(`${product.id}`);
   };
 
+  const handleDelete = () => {};
+
+  const handleEdit = () => {};
+
+  const handleHover = (index) => {
+    setHoverProductIndex(index);
+    setShowButton(true);
+  };
+
+  const handleHoverOut = () => {
+    setHoverProductIndex(0);
+    setShowButton(false);
+  };
+
   return (
     <div
-      className="card w-60 bg-slate-400 shadow-xl glass cursor-pointer mb-8 mr-5 text-black"
-      onClick={handleClick}
+      className="card w-60 bg-slate-400 shadow-xl glass cursor-pointer mb-8 mr-5 text-black pb relative"
+      onMouseOver={() => handleHover(product.id)}
+      onMouseLeave={handleHoverOut}
     >
-      <figure className="mix-blend-multiply">
+      <figure className="mix-blend-multiply" onClick={handleClick}>
         {/* <ImageMagnifier src={product.image[0]} /> */}
         <img
           src={product.image[0]}
@@ -21,11 +41,14 @@ function Product({ product }) {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title truncate text-lg">
+        <h2 className="card-title truncate text-lg" onClick={handleClick}>
           {product.Brand}
           <div className="badge badge-secondary">NEW</div>
         </h2>
-        <div className="text-base truncate font-bold  h-25 text-justify">
+        <div
+          className="text-base truncate font-bold  h-25 text-justify"
+          onClick={handleClick}
+        >
           {product.title}
         </div>
         <p className="text-base font-extrabold">
@@ -55,11 +78,26 @@ function Product({ product }) {
           </a>
         </div>
 
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-end mb-2">
           <div className="badge badge-outline capitalize">{product.type}</div>
           <div className="badge badge-outline">Products</div>
         </div>
-        <div className="card-actions justify-center"></div>
+        {showButton && hoverProductIndex === product.id ? (
+          <div className="w-full absolute bg-red-700 bottom-0 left-0 rounded-b-xl flex items-center text-lg font-extrabold productButton">
+            <div
+              className="w-3/6 flex items-center justify-center bg-green-300 rounded-bl-xl"
+              onClick={handleEdit}
+            >
+              Edit <img src={editImg} className="w-5 ml-2" />
+            </div>
+            <div
+              className="w-3/6 flex items-center justify-center bg-red-300 rounded-br-xl"
+              onClick={handleDelete}
+            >
+              Delete <img src={deleteImg} className="w-5 ml-2" />
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

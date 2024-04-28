@@ -40,6 +40,11 @@
   height: 95vh;
 }
 
+.productButton {
+  animation: button-slide-in-out 1s ease-in forwards;
+  transform: translateY(90%);
+}
+
 /* Animation for alert styling */
 @keyframes slide-in-out {
   10% {
@@ -50,5 +55,17 @@
   }
   100% {
     transform: translateX(150%);
+  }
+}
+
+@keyframes button-slide-in-out {
+  10% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
