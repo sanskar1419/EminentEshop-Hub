@@ -16,6 +16,20 @@ export const getUserAsync = createAsyncThunk("user/get", async () => {
   return await response.json();
 });
 
+export const updateUserAsync = createAsyncThunk(
+  "user/update",
+  async (payload) => {
+    console.log("Async Handeller");
+    const response = await fetch("http://localhost:3000/user", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    /* Returning the promise */
+    return await response.json();
+  }
+);
+
 const userSlice = createSlice({
   name: "user",
   initialState,
@@ -25,6 +39,9 @@ const userSlice = createSlice({
     },
     resetError: (state, action) => {
       state.error = null;
+    },
+    setError: (state, action) => {
+      state.error = "Can't Add this product. Already In Cart";
     },
   },
   extraReducers: (builder) => {
@@ -36,6 +53,11 @@ const userSlice = createSlice({
       })
       .addCase(getUserAsync.rejected, (state, action) => {
         state.error = "Something Went Wrong 😔😔😔";
+      })
+      .addCase(updateUserAsync.fulfilled, (state, action) => {
+        // console.log("...........", action.payload);
+        state.cart = [...action.payload.cart];
+        state.message = "Product Added to Cart";
       });
   },
 });
@@ -47,3 +69,5 @@ export const getCart = (state) => state.user.cart;
 export const getLoadingState = (state) => state.user.loading;
 export const getUserMessage = (state) => state.user.message;
 export const getUserError = (state) => state.user.error;
+export const getName = (state) => state.user.name;
+export const getUserName = (state) => state.user.userName;

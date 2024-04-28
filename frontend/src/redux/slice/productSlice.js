@@ -21,8 +21,6 @@ export const getAllProductsAsync = createAsyncThunk(
 export const addNewProductAsync = createAsyncThunk(
   "product/add",
   async (payload) => {
-    console.log("Input inside addNewProductAsync function : ", payload);
-
     // console.log(".........................");
     /* Making POST API Call to add the new todo */
     const response = await fetch("http://localhost:3000/products", {

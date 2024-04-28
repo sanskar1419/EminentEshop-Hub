@@ -8,6 +8,7 @@ import {
 } from "../../redux/slice/productSlice";
 import GridLoader from "react-spinners/GridLoader";
 import Products from "../../components/Products/Products";
+import { getUserAsync } from "../../redux/slice/userSlice";
 
 function Home() {
   const dispatch = useDispatch();
@@ -19,6 +20,10 @@ function Home() {
     dispatch(productActions.fetchStart());
     /* Dispatching getAllTodoAsync function of asyncThunk to make API call and get all todos details*/
     dispatch(getAllProductsAsync());
+  }, []);
+
+  useEffect(() => {
+    dispatch(getUserAsync());
   }, []);
 
   return (

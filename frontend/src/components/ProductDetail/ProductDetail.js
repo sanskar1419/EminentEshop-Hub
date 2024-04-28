@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../redux/slice/productSlice";
 import ImageMagnifier from "../ImageMagnifier/ImageMagnifier";
@@ -8,14 +8,48 @@ import freeDeliveryImg from "../../images/free-delivery.png";
 import topBrandImg from "../../images/brand-image.png";
 import warrantyImg from "../../images/warranty.png";
 import payOnDeliveryImg from "../../images/cash-on-delivery.png";
+import {
+  getCart,
+  getName,
+  getUserAsync,
+  getUserName,
+  updateUserAsync,
+  userActions,
+} from "../../redux/slice/userSlice";
 
 function ProductDetail() {
+  const dispatch = useDispatch();
   const { id } = useParams();
   const products = useSelector(getProducts);
   const product = products.find((p) => p.id == id);
   const [currentImage, setCurrentImage] = useState(product.image[0]);
+  const cart = useSelector(getCart);
+  const name = useSelector(getName);
+  const userName = useSelector(getUserName);
 
-  const handleHover = () => {};
+  const handleAddToCart = () => {
+    const productIndex = cart.findIndex((p) => p.product.id === product.id);
+    console.log("Product Index : ", productIndex);
+    if (productIndex === -1) {
+      dispatch(
+        updateUserAsync({
+          name,
+          userName,
+          cart: [
+            ...cart,
+            {
+              quality: 1,
+              product: {
+                ...product,
+              },
+            },
+          ],
+        })
+      );
+    } else {
+      dispatch(userActions.setError());
+    }
+  };
 
   return (
     <div className="flex items-start flex-row bottom-5 w-full justify-center h-auto pt-10 bg-sky-100 pb-3">
@@ -204,6 +238,7 @@ function ProductDetail() {
             <button
               className="btn btn-warning text-md font-extrabold badge rounded-full w-11/12"
               style={{ height: "2rem", minHeight: "2rem" }}
+              onClick={handleAddToCart}
             >
               Add To Cart
             </button>
