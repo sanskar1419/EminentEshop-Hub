@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import AddProduct from "./pages/NewProduct/AddProduct";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   /* React Router Configuration */
@@ -29,10 +30,10 @@ function App() {
           path: "update/:id",
           element: <UpdateProduct />,
         },
-        // {
-        //   path: "update",
-        //   element: <UpdateTodo />,
-        // },
+        {
+          path: "cart",
+          element: <Cart />,
+        },
       ],
     },
   ]);

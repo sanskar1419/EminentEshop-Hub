@@ -9,12 +9,22 @@ import {
   productActions,
 } from "../../redux/slice/productSlice";
 import { useEffect } from "react";
+import {
+  getCart,
+  getUser,
+  getUserError,
+  getUserMessage,
+  userActions,
+} from "../../redux/slice/userSlice";
 
 /* Defining functional Navbar component */
 function Navbar() {
   const dispatch = useDispatch();
   const message = useSelector(getMessage);
   const error = useSelector(getError);
+  const userMessage = useSelector(getUserMessage);
+  const userError = useSelector(getUserError);
+  const cart = useSelector(getCart);
 
   /* Using useEffect hook to reset the message and error to null whenever they changes */
   useEffect(() => {
@@ -32,7 +42,21 @@ function Navbar() {
         dispatch(productActions.resetError());
       }, 3000);
     }
-  }, [message, error]);
+    /* If message exist */
+    if (userMessage) {
+      setTimeout(() => {
+        /* Dispatching a action to reset message */
+        dispatch(userActions.resetMessage());
+      }, 3000);
+    }
+    /* If error exist */
+    if (userError) {
+      setTimeout(() => {
+        /* Dispatching a action to reset error */
+        dispatch(userActions.resetError());
+      }, 3000);
+    }
+  }, [message, error, userError, userMessage]);
 
   /* Returning the JSX */
   return (
@@ -72,6 +96,44 @@ function Navbar() {
             />
           </svg>
           <span>{error}</span>
+        </div>
+      )}
+
+      {userMessage && (
+        <div role="alert" className="alert alert-success alertMessage">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span>{userMessage}</span>
+        </div>
+      )}
+      {/* If error is there showing the alert */}
+      {userError && (
+        <div role="alert" className="alert alert-error errorAlert">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span>{userError}</span>
         </div>
       )}
       <div className="navbar bg-primary text-primary-content">
@@ -134,11 +196,11 @@ function Navbar() {
           </button>
           <button className="btn btn-ghost btn-circle">
             <div className="indicator">
-              <Link to="/add">
+              <Link to="/cart">
                 {" "}
                 <img src={addToCart} alt="Add" width="40px" />
                 <span className="badge badge-xs badge-black indicator-item">
-                  0
+                  {cart.length}
                 </span>
               </Link>
             </div>

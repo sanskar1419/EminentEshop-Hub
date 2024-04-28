@@ -245,9 +245,7 @@
         "Pattern": "Solid",
         "Country of Origin": "USA"
       },
-      "description": [
-        "Fit Type: Relaxed"
-      ],
+      "description": ["Fit Type: Relaxed"],
       "additional": {
         "Item Weight": "998 g"
       }
@@ -436,14 +434,12 @@
       "additional": null
     }
   ],
-  "user": [
-    {
-      "userId": 1,
-      "username": "John1419",
-      "name": "John Doe",
-      "password": "123456",
-      "cart": [],
-      "id": "229b"
-    }
-  ]
+  "user": {
+    "userId": 1,
+    "username": "John1419",
+    "name": "John Doe",
+    "password": "123456",
+    "cart": [],
+    "id": "229b"
+  }
 }
