@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "json-server": "^1.0.0-alpha.23"
+  },
+  "scripts": {
+    "start": "json-server --watch backend/db.json",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   }
 }
