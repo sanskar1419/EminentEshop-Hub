@@ -1,15 +1,81 @@
-# Getting Started with Create React App and Redux
+# E Commerce Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+E Commerce Application is simple application in which user can do almost all e commerce activity
 
-## Available Scripts
+## Tech Stack
+
+**Client:** ReactJs, CSS, HTML, Redux, tailwind css, daisyUI
+
+## Server Repository Link
+
+To view the repository go to this link
+
+```bash
+   https://github.com/sanskar1419/E-Commerce-Server.git
+```
+
+## Server Deployment Link
+
+To view the documentation go to this link
+
+```bash
+   https://e-commerce-server-815s.onrender.com
+```
+
+## Frontend Deployment Link
+
+To view the web application go to this link
+
+```bash
+   https://e-commerce-application-atlo.onrender.com/
+```
+
+## Installation
+
+To install the Busy_Buy, follow these steps:
+
+Clone this repository using the following command:
+
+```
+$ git clone https://github.com/sanskar1419/E-Commerce-Application.git
+```
+
+Install the dependencies:
+
+```
+$ npm install
+```
+
+or
+
+```
+$ npm i
+```
+
+Start the frontend application using the following command:
+
+```
+$ npm start
+```
+
+Open the application in your web browser by visiting the following URL:
+
+```
+$ http://localhost:8000
+```
+
+## Folder Structure
+
+![Folder Structure](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/Screenshot%202024-04-29%20161030.png?raw=true)
+
+## Available Scripts for frontend
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:8000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -39,8 +105,36 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Home(List of all Products)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Home](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/product%20page.png?raw=true)
+
+### Home Page With Edit and Delete Button
+
+![Home Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/edit%20and%20delete.png?raw=true)
+
+### Home Page With Filter Products based on price
+
+![Home Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/filterproduct.png?raw=true)
+
+### Product Detail Page
+
+![Product Detail Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/Details%20Page.png?raw=true)
+
+### Add Product Page
+
+![Add Product Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/new%20product.png?raw=true)
+
+### Update Product Page
+
+![Update Product Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/Update%20Page.png?raw=true)
+
+### No Items in cart page
+
+![No Items](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/Screenshot%202024-04-28%20175758.png?raw=true)
+
+### Cart Page
+
+![Cart Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/cart.png?raw=true)
