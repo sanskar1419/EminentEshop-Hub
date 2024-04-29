@@ -11,7 +11,7 @@ const initialState = {
 
 export const getUserAsync = createAsyncThunk("user/get", async () => {
   /* Making the GET API Call to get products array */
-  const response = await fetch("http://localhost:3000/user");
+  const response = await fetch("http://localhost:9000/user");
   /* Returning the promise */
   return await response.json();
 });
@@ -20,7 +20,7 @@ export const updateUserAsync = createAsyncThunk(
   "user/update",
   async (payload) => {
     console.log("Async Handeller");
-    const response = await fetch("http://localhost:3000/user", {
+    const response = await fetch("http://localhost:9000/user", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),

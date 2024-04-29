@@ -1,42 +1,6 @@
 {
   "products": [
     {
-      "title": "Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)",
-      "rating": "4.2",
-      "mrp": 17500,
-      "price": 12590,
-      "Brand": "Godrej",
-      "Review": 94,
-      "image": [
-        "https://m.media-amazon.com/images/I/61jQdWXtqSL._SX466_.jpg",
-        "https://m.media-amazon.com/images/I/71zhEN-vXzL._SX466_.jpg",
-        "https://m.media-amazon.com/images/I/714FjRrja3L._SX466_.jpg",
-        "https://m.media-amazon.com/images/I/71jqFYAGF1L._SX466_.jpg"
-      ],
-      "type": "electronic",
-      "details": {
-        "Product Dimensions": "64.5D x 57.6W x 118H Centimeters",
-        "Brand": "Godrej",
-        "Capacity": "180 litres",
-        "Configuration": "Freezer-on-Top",
-        "Energy Star": "2 Star"
-      },
-      "description": [
-        "Direct Cool Refrigerator: Economical and stylish",
-        "Direct- Cool Refrigerator with Capacity: 180 litres, suitable for a small family",
-        "Energy Efficiency: 2 star, Annual energy consumption: 186 Kilowatt Hours (Please refer energy label on product page or contact brand for more details)",
-        "Manufacturer Warranty: 10 Years Compressor Warranty, 1 Year Comprehensive Warranty",
-        "20L Largest Vegetable Tray: Largest vegetable tray in its segment with 20 litres of storage space",
-        "Shelf type: Strong wired shelves that ensures durability and withstands large vessels and bowls",
-        "2.25L Bottle Shelf: Now store that extra large 2.25 L bottle of water or cola with ease.",
-        "Refrigerant: R600A Refrigerant ensures zero harm to the environment making it a sustainable product",
-        "Included in the box: 1 Refrigerator and Manual",
-        "Recess Handle: This aesthetically designed refrigerator door is equipped with a recess handle."
-      ],
-      "additional": null,
-      "id": "2"
-    },
-    {
       "id": "4",
       "title": "Fastrack FS1 Pro Smartwatch | 1.96 inch Super AMOLED Arched Display with High Resolution of 410X502 | Singlesync BT Calling | Nitrofast Charging|110+ Sports Modes | 200+ Watchfaces",
       "rating": 4.1,
@@ -224,32 +188,6 @@
         "Front Camera": "12MP TrueDepth front camera with Portrait mode, Depth Control, Portrait Lighting, and Smart HDR 4",
         "Power and Battery": "Video playback:Up to 19 hours, Video playback (streamed):Up to 15 hours, Audio playback:Up to 75 hours, 20W adapter or higher (sold separately), Fast-charge capable: Up to 50% charge in around 30 minutes with 20W adapter or higher",
         "Warranty": "Apple-branded hardware product and accessories contained in the original packaging (“Apple Product”) come with a One-Year Limited Warranty. See apple.com/in/legal/warranty for more information."
-      }
-    },
-    {
-      "id": "19",
-      "title": "Lee Men's Fleece Lined Relaxed Fit Straight Leg Jean, Dark Wash, 36W X 32L",
-      "rating": 4.5,
-      "mrp": 9999,
-      "price": 7961,
-      "Brand": "Lee Men's",
-      "Review": 83,
-      "image": [
-        "https://m.media-amazon.com/images/I/717mOVMcHLL._SX522_.jpg",
-        "https://m.media-amazon.com/images/I/71SXuiMRuQL._SX522_.jpg"
-      ],
-      "type": "Men",
-      "details": {
-        "Material type": "Fleece",
-        "Fit type": "Relaxed",
-        "Pattern": "Solid",
-        "Country of Origin": "USA"
-      },
-      "description": [
-        "Fit Type: Relaxed"
-      ],
-      "additional": {
-        "Item Weight": "998 g"
       }
     },
     {
@@ -596,6 +534,45 @@
             "IP Rating- The tws earbuds body comes protected with IPX4 rating for water and sweat resistance",
             "Voice Assistant- You can summon your default voice assistant(s) with ease via its One Touch Voice Assistant",
             "Country Of Origin:China, India"
+          ],
+          "additional": null
+        }
+      },
+      {
+        "quality": 1,
+        "product": {
+          "id": "20",
+          "title": "Nikon D7500 20.9MP Digital SLR Camera (Black) with AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR Lens",
+          "rating": 4.4,
+          "mrp": 94950,
+          "price": 93950,
+          "Brand": "Nikon",
+          "Review": 56,
+          "image": [
+            "https://m.media-amazon.com/images/I/71iKNJ6rVIL._SY355_.jpg",
+            "https://m.media-amazon.com/images/I/51g0J5dj7GL._SY355_.jpg",
+            "https://m.media-amazon.com/images/I/51mg-oAhtHL._SY355_.jpg",
+            "https://m.media-amazon.com/images/I/515+vgB6OOL._SY355_.jpg"
+          ],
+          "type": "electronic",
+          "details": {
+            "Brand": "Nikon",
+            "Model Name": "D7500",
+            "Maximum Webcam Image Resolution": "20.9 MP",
+            "Photo Sensor Size": "APS-C fps",
+            "Image Stabilisation": "Optical",
+            "Maximum Shutter Speed": "1/8000 to 30 Seconds",
+            "Minimum Shutter Speed": "30 Seconds",
+            "Metering Description": "3D Color Matrix",
+            "Exposure Control Type": "Automatic",
+            "Form Factor": "DSLR"
+          },
+          "description": [
+            "20.9MP DX-Format CMOS Sensor, SnapBridge Bluetooth and Wi-Fi;4K UHD Video Recording at 30 fps",
+            "Multi-CAM 3500FX II 51-Point AF System",
+            "Native ISO 51200, Expanded ISO 1,640,000",
+            "180k-Pixel RGB Sensor and Group Area AF; Country of Origin: Japan",
+            "Compatible Mountings: Nikon F; Hardware Interface: Audio Video Port"
           ],
           "additional": null
         }

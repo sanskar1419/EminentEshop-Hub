@@ -1,9 +1,18 @@
 {
-  "dependencies": {
-    "json-server": "^1.0.0-alpha.23"
-  },
+  "name": "e_com_app",
+  "version": "1.0.0",
+  "description": "E-Commerce Application",
+  "main": "server.js",
   "scripts": {
-    "start": "json-server backend/db.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "json-serve": "^0.1.0",
+    "json-server": "^0.17.1"
   }
 }

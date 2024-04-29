@@ -12,7 +12,7 @@ export const getAllProductsAsync = createAsyncThunk(
   "product/getAll",
   async () => {
     /* Making the GET API Call to get products array */
-    const response = await fetch("http://localhost:3000/products");
+    const response = await fetch("http://localhost:9000/products");
     /* Returning the promise */
     return await response.json();
   }
@@ -23,7 +23,7 @@ export const addNewProductAsync = createAsyncThunk(
   async (payload) => {
     // console.log(".........................");
     /* Making POST API Call to add the new todo */
-    const response = await fetch("http://localhost:3000/products", {
+    const response = await fetch("http://localhost:9000/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -38,7 +38,7 @@ export const deleteProductAsync = createAsyncThunk(
   "product/delete",
   async (payload, thunkAPI) => {
     /* Making DELETE API Call to */
-    const response = await fetch(`http://localhost:3000/products/${payload}`, {
+    const response = await fetch(`http://localhost:9000/products/${payload}`, {
       method: "DELETE",
     });
     /* Returning the promise */
@@ -53,7 +53,7 @@ export const updateProductAsync = createAsyncThunk(
     /* Making DELETE API Call to */
     console.log(payload);
     const response = await fetch(
-      `http://localhost:3000/products/${payload.id}`,
+      `http://localhost:9000/products/${payload.id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
