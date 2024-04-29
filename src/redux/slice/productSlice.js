@@ -12,7 +12,9 @@ export const getAllProductsAsync = createAsyncThunk(
   "product/getAll",
   async () => {
     /* Making the GET API Call to get products array */
-    const response = await fetch("http://localhost:9000/products");
+    const response = await fetch(
+      "https://e-commerce-server-815s.onrender.com/products"
+    );
     /* Returning the promise */
     return await response.json();
   }
@@ -23,11 +25,14 @@ export const addNewProductAsync = createAsyncThunk(
   async (payload) => {
     // console.log(".........................");
     /* Making POST API Call to add the new todo */
-    const response = await fetch("http://localhost:9000/products", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const response = await fetch(
+      "https://e-commerce-server-815s.onrender.com/products",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
     /* Returning the promise */
     return await response.json();
   }
@@ -38,9 +43,12 @@ export const deleteProductAsync = createAsyncThunk(
   "product/delete",
   async (payload, thunkAPI) => {
     /* Making DELETE API Call to */
-    const response = await fetch(`http://localhost:9000/products/${payload}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `https://e-commerce-server-815s.onrender.com/products/${payload}`,
+      {
+        method: "DELETE",
+      }
+    );
     /* Returning the promise */
     return await response.json();
   }
@@ -53,7 +61,7 @@ export const updateProductAsync = createAsyncThunk(
     /* Making DELETE API Call to */
     console.log(payload);
     const response = await fetch(
-      `http://localhost:9000/products/${payload.id}`,
+      `https://e-commerce-server-815s.onrender.com/products/${payload.id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -106,7 +114,7 @@ const productSlice = createSlice({
         state.loading = false;
       })
       .addCase(addNewProductAsync.fulfilled, (state, action) => {
-        console.log(action.payload);
+        state.products.push(action.payload);
         state.loading = false;
         state.message = "Product Added Successfully";
       })
