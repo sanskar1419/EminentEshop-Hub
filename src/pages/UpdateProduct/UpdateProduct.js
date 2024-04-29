@@ -1,5 +1,5 @@
-// import AddForm from "../../components/AddForm/AddForm";
-import { useEffect, useState } from "react";
+/* Importing Necessary files, module etc */
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -14,12 +14,19 @@ import topBrandImg from "../../images/brand-image.png";
 import warrantyImg from "../../images/warranty.png";
 import payOnDeliveryImg from "../../images/cash-on-delivery.png";
 
+/* UpdateProduct Functional Component */
 function UpdateProduct() {
+  /* Defining Method To Dispatching Actions */
   const dispatch = useDispatch();
+  /* Destructuring id from params */
   const { id } = useParams();
+  /* Getting all product from product part redux store using useSelector hook  */
   const products = useSelector(getProducts);
+  /* Finding the matching product with prams id */
   const product = products.find((p) => p.id == id);
+  /* Defining state variable currentImage and setCurrentImage to set the current image url using useState hook */
   const [currentImage, setCurrentImage] = useState(product.image[0]);
+  /* Defining state variable input and setInputs to set the updated data using useState hook */
   const [input, setInputs] = useState({
     title: product.title,
     price: product.price,
@@ -27,10 +34,12 @@ function UpdateProduct() {
     Brand: product.Brand,
     rating: product.rating,
   });
-  console.log("Product : ", product);
 
+  /* Function to handle save click */
   const handleClick = () => {
+    /* Calling this redux#ActionCreator fetchStart with an argument */
     dispatch(productActions.fetchStart());
+    /* Calling AsyncThunkAction name updateProductAsync with argument to make a PUT Call */
     dispatch(
       updateProductAsync({
         id: product.id,
@@ -49,6 +58,7 @@ function UpdateProduct() {
     );
   };
 
+  /* Returning the JSX */
   return (
     <>
       <div className="bg-sky-100 flex items-center justify-center font-bold pt-5 w-full text-2xl text-blue-900 relative">
@@ -280,4 +290,5 @@ function UpdateProduct() {
   );
 }
 
+/* Export Default UpdateProduct */
 export default UpdateProduct;

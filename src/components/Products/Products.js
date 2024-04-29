@@ -1,27 +1,38 @@
+/* Importing Necessary files, module etc */
 import { useSelector } from "react-redux";
 import Product from "../Product/Product";
 import { getProducts } from "../../redux/slice/productSlice";
 import { useState } from "react";
 import removeImg from "../../images/remove.png";
 
+/* Products Functional Component */
 function Products() {
+  /* Defining state variable price and setPrice to set price using useState hook */
   const [price, setPrice] = useState(75000);
+  /* Defining state variable showMenu and setShowMenu to set boolean value using useState hook */
   const [showMenu, setShowMenu] = useState(false);
+  /* Getting all products from product part redux store using useSelector hook  */
   const products = useSelector(getProducts);
+  /* Defining state variable filterProduct and setFilterProduct to set empty array using useState hook */
   const [filterProduct, setFilterProduct] = useState([]);
 
+  /* On sort button click setting the show menu to true */
   const handleSortClick = () => {
     setShowMenu(true);
   };
+
+  /* On cross click setting the show menu to false */
   const handleCloseMenu = () => {
     setShowMenu(false);
   };
 
+  /* Finding and setting the filter product */
   const handleFilter = () => {
     const result = products.filter((product) => product.price <= price);
     setFilterProduct([...result]);
   };
 
+  /* Returning the JSX */
   return (
     <div className="flex flex-wrap items-center justify-center w-5/6 relative">
       {showMenu ? (
@@ -68,4 +79,5 @@ function Products() {
   );
 }
 
+/* Exporting Products component */
 export default Products;

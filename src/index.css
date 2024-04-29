@@ -1,3 +1,4 @@
+/* Importing tailwind config */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,6 +34,7 @@
   z-index: 999;
 }
 
+/* Loader Positioning */
 .loader {
   display: flex;
   align-items: center;
@@ -58,6 +60,7 @@
   }
 }
 
+/* Home Button animation */
 @keyframes button-slide-in-out {
   10% {
     transform: translateY(0);

@@ -1,3 +1,4 @@
+/* Importing Necessary files, module etc */
 import { useSelector } from "react-redux";
 import { getCart } from "../../redux/slice/userSlice";
 import NoItemInCart from "../../components/NoItemsInCart/NoItemsInCart";
@@ -13,9 +14,8 @@ function Cart() {
     totalItem: 0,
     totalMRP: 0,
   });
+  /* Getting cart from user part redux store using useSelector hook  */
   const cart = useSelector(getCart);
-
-  console.log("Cart Item : ", cart);
 
   // Using useEffect hook to calculate totals on mounting and whenever user data changes
   useEffect(() => {
@@ -35,6 +35,7 @@ function Cart() {
     }
   }, [cart]);
 
+  /* Returning the JSX */
   return (
     <>
       {cart.length === 0 ? (
@@ -88,4 +89,5 @@ function Cart() {
   );
 }
 
+/* Exporting the Cart Component */
 export default Cart;

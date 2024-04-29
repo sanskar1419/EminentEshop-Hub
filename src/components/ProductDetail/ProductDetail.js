@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+/* Importing Necessary files, module etc */
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../redux/slice/productSlice";
@@ -11,26 +12,37 @@ import payOnDeliveryImg from "../../images/cash-on-delivery.png";
 import {
   getCart,
   getName,
-  getUserAsync,
   getUserName,
   updateUserAsync,
   userActions,
 } from "../../redux/slice/userSlice";
 
+/* ProductDetail Functional Component */
 function ProductDetail() {
+  /* Defining Method To Dispatching Actions */
   const dispatch = useDispatch();
+  /* Extracting id from params */
   const { id } = useParams();
+  /* Getting all products from product part redux store using useSelector hook  */
   const products = useSelector(getProducts);
+  /* Finding the matching product with prams id */
   const product = products.find((p) => p.id == id);
+  /* Defining state variable currentImage and setCurrentImage to set the current image url using useState hook */
   const [currentImage, setCurrentImage] = useState(product.image[0]);
+  /* Getting cart from user part redux store using useSelector hook  */
   const cart = useSelector(getCart);
+  /* Getting name from user part redux store using useSelector hook  */
   const name = useSelector(getName);
+  /* Getting userName from user part redux store using useSelector hook  */
   const userName = useSelector(getUserName);
 
+  /* Function to handle add to cart click */
   const handleAddToCart = () => {
+    /* Finding weather product already exist or not */
     const productIndex = cart.findIndex((p) => p.product.id === product.id);
-    console.log("Product Index : ", productIndex);
+    /* if not exist */
     if (productIndex === -1) {
+      /* Calling AsyncThunkAction name updateUserAsync with argument to make a PUT Call and add product to cart*/
       dispatch(
         updateUserAsync({
           name,
@@ -47,19 +59,24 @@ function ProductDetail() {
         })
       );
     } else {
+      /* If exist showing the error product already exist */
       dispatch(userActions.setError());
     }
   };
 
+  /* Returning the JSX */
   return (
     <div className="flex items-start flex-row bottom-5 w-full justify-center h-auto pt-10 bg-sky-100 pb-3">
       <div className="mr-3 w-2/5 flex justify-around items-center">
         <div className="w-10 mr-4 flex justify-center flex-col">
+          {/* Mapping over image array */}
           {product.image.map((i, index) => (
             <img
               src={i}
               className="mb-2 rounded-lg h-18 ring ring-pink-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900 cursor-pointer hover:ring-blue-500"
               onMouseOver={() => setCurrentImage(i)}
+              alt="product"
+              key={index}
             />
           ))}
         </div>
@@ -119,35 +136,35 @@ function ProductDetail() {
 
           <div className="flex w-full justify-around items-start">
             <div className="flex flex-col justify-center items-center w-16">
-              <img src={replacementImg} className="w-8" />
+              <img src={replacementImg} className="w-8" alt="replacement" />
               <p className="text-center text-xs" style={{ fontSize: "0.6rem" }}>
                 7 days Service Centre Replacement
               </p>
             </div>
 
             <div className="flex flex-col justify-center items-center w-16">
-              <img src={freeDeliveryImg} className="w-8" />
+              <img src={freeDeliveryImg} className="w-8" alt="delivery" />
               <p className="text-center text-xs" style={{ fontSize: "0.6rem" }}>
                 Free Delivery
               </p>
             </div>
 
             <div className="flex flex-col justify-center items-center w-16">
-              <img src={warrantyImg} className="w-8" />
+              <img src={warrantyImg} className="w-8" alt="warranty" />
               <p className="text-center text-xs" style={{ fontSize: "0.6rem" }}>
                 6 Month Warranty
               </p>
             </div>
 
             <div className="flex flex-col justify-center items-center w-16">
-              <img src={payOnDeliveryImg} className="w-8" />
+              <img src={payOnDeliveryImg} className="w-8" alt="pay" />
               <p className="text-center text-xs" style={{ fontSize: "0.6rem" }}>
                 Pay on Delivery
               </p>
             </div>
 
             <div className="flex flex-col justify-center items-center w-16">
-              <img src={topBrandImg} className="w-8" />
+              <img src={topBrandImg} className="w-8" alt="top brand" />
               <p className="text-center text-xs" style={{ fontSize: "0.6rem" }}>
                 Top Brand
               </p>
@@ -159,7 +176,11 @@ function ProductDetail() {
               <div className="border-t-2 border-slate-400 w-full mt-4 mb-3"></div>
               <div className="w-full">
                 {Object.keys(product.details).map((key, index) => (
-                  <div className="flex w-full" style={{ fontSize: "0.51rem" }}>
+                  <div
+                    className="flex w-full"
+                    style={{ fontSize: "0.51rem" }}
+                    key={index}
+                  >
                     <div className="w-2/4">{key}</div>
                     <div className="w-2/4"> {product.details[key]}</div>
                   </div>
@@ -175,8 +196,8 @@ function ProductDetail() {
                 About this item
               </h1>
               <ul style={{ fontSize: "0.5rem" }} className="w-full">
-                {product.description.map((a) => (
-                  <li className="text-justify font-medium">
+                {product.description.map((a, index) => (
+                  <li className="text-justify font-medium" key={index}>
                     <div
                       className="badge badge-ghost badge-xs"
                       style={{ fontSize: "0.2rem", height: "0.3rem" }}
@@ -196,7 +217,11 @@ function ProductDetail() {
               </h1>
               <div className="w-full">
                 {Object.keys(product.additional).map((key, index) => (
-                  <div className="flex w-full" style={{ fontSize: "0.51rem" }}>
+                  <div
+                    className="flex w-full"
+                    style={{ fontSize: "0.51rem" }}
+                    key={index}
+                  >
                     <div className="w-2/5 mr-2">{key}</div>
                     <div className="w-7/12"> {product.additional[key]}</div>
                   </div>
@@ -249,4 +274,5 @@ function ProductDetail() {
   );
 }
 
+/* Exporting ProductDetail Component */
 export default ProductDetail;

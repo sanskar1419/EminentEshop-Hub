@@ -1,6 +1,9 @@
+/* Importing Necessary files, module etc */
 import AddForm from "../../components/AddForm/AddForm";
 
+/* AddProduct Functional Component */
 function AddProduct() {
+  /* Returning the JSX */
   return (
     <>
       <div className="flex mt-4 text-3xl flex-col justify-center items-center mb-8">
@@ -13,4 +16,5 @@ function AddProduct() {
   );
 }
 
+/* Exporting component AddProduct */
 export default AddProduct;

@@ -11,7 +11,6 @@ import {
 import { useEffect } from "react";
 import {
   getCart,
-  getUser,
   getUserError,
   getUserMessage,
   userActions,
@@ -19,11 +18,17 @@ import {
 
 /* Defining functional Navbar component */
 function Navbar() {
+  /* Defining Method To Dispatching Actions */
   const dispatch = useDispatch();
+  /* Getting message state from product part redux store using useSelector hook  */
   const message = useSelector(getMessage);
+  /* Getting error state from product part redux store using useSelector hook  */
   const error = useSelector(getError);
+  /* Getting userMessage state from user part redux store using useSelector hook  */
   const userMessage = useSelector(getUserMessage);
+  /* Getting userError state from user part redux store using useSelector hook  */
   const userError = useSelector(getUserError);
+  /* Getting cart state from user part redux store using useSelector hook  */
   const cart = useSelector(getCart);
 
   /* Using useEffect hook to reset the message and error to null whenever they changes */
@@ -61,6 +66,7 @@ function Navbar() {
   /* Returning the JSX */
   return (
     <>
+      {/* If Message Exist Showing the message notification */}
       {message && (
         <div role="alert" className="alert alert-success alertMessage">
           <svg
@@ -99,6 +105,7 @@ function Navbar() {
         </div>
       )}
 
+      {/* If userMessage Exist Showing the message notification */}
       {userMessage && (
         <div role="alert" className="alert alert-success alertMessage">
           <svg
@@ -136,6 +143,7 @@ function Navbar() {
           <span>{userError}</span>
         </div>
       )}
+      {/* Main Navbar Component */}
       <div className="navbar bg-primary text-primary-content">
         <div className="navbar-start">
           <div className="dropdown">

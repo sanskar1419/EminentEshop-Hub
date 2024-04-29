@@ -1,3 +1,4 @@
+/* Importing Necessary files, module etc */
 import { useNavigate } from "react-router-dom";
 import deleteImg from "../../images/delete-product.png";
 import editImg from "../../images/pencil.png";
@@ -10,36 +11,52 @@ import {
 } from "../../redux/slice/productSlice";
 import BeatLoader from "react-spinners/BeatLoader";
 
+/* Product Functional Component */
 function Product({ product }) {
+  /* Defining method to navigate to some other link */
   const navigate = useNavigate();
+  /* Defining Method To Dispatching Actions */
   const dispatch = useDispatch();
+  /* Getting loading state from product part redux store using useSelector hook  */
   const loading = useSelector(getLoading);
+  /* Defining state variable showButton and setShowButton to bool data using useState hook */
   const [showButton, setShowButton] = useState(false);
+  /* Defining state variable showButton and setShowButton to record index to save using useState hook */
   const [hoverProductIndex, setHoverProductIndex] = useState(0);
 
+  /* Function to handle product click */
   const handleClick = () => {
+    /* On clicking navigating to product detail page */
     navigate(`${product.id}`);
   };
 
+  /* Function to handle delete */
   const handleDelete = () => {
+    /* Calling this redux#ActionCreator fetchStart with an argument */
     dispatch(productActions.fetchStart());
+    /* Calling AsyncThunkAction name deleteProductAsync with argument to make a DELETE Call */
     dispatch(deleteProductAsync(product.id));
   };
 
+  /* Function to handle Edit click */
   const handleEdit = () => {
+    /* On clicking navigating to update product page */
     navigate(`update/${product.id}`);
   };
 
+  /* Function to handle and set product index on hover */
   const handleHover = (index) => {
     setHoverProductIndex(index);
     setShowButton(true);
   };
 
+  /* Function to handle and set product index as 0 on hover */
   const handleHoverOut = () => {
     setHoverProductIndex(0);
     setShowButton(false);
   };
 
+  /* Returning the JSX */
   return (
     <div
       className="card w-60 bg-slate-400 shadow-xl glass cursor-pointer mb-8 mr-5 text-black pb relative"
@@ -47,7 +64,6 @@ function Product({ product }) {
       onMouseLeave={handleHoverOut}
     >
       <figure className="mix-blend-multiply" onClick={handleClick}>
-        {/* <ImageMagnifier src={product.image[0]} /> */}
         <img
           src={product.image[0]}
           alt="product"
@@ -108,6 +124,7 @@ function Product({ product }) {
               className="w-3/6 flex items-center justify-center bg-red-300 rounded-br-xl"
               onClick={handleDelete}
             >
+              {/* If Loading State is true showing the BeatLoader otherwise button */}
               {loading ? (
                 <BeatLoader color="black" />
               ) : (
@@ -123,4 +140,5 @@ function Product({ product }) {
   );
 }
 
+/* Export Product Component */
 export default Product;

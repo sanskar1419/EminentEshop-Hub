@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+/* Importing Necessary files, module etc */
+import { useState } from "react";
 
+/* ImageMagnifier Functional Component */
 function ImageMagnifier({
   src,
   width,
@@ -8,9 +10,12 @@ function ImageMagnifier({
   magnifieWidth = 200,
   zoomLevel = 2,
 }) {
+  /* Defining State Variable */
   const [[x, y], setXY] = useState([0, 0]);
   const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
   const [showMagnifier, setShowMagnifier] = useState(false);
+
+  /* Returning The JSX */
   return (
     <div
       style={{
@@ -80,4 +85,5 @@ function ImageMagnifier({
   );
 }
 
+/* Exporting ImageMagnifier */
 export default ImageMagnifier;
