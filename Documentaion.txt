@@ -1,0 +1,67 @@
+Problem faced during the project
+
+1. Using the persistence storage
+
+For this I have used the redux-persist library
+
+First, we’ll add Redux Persist to our app with the following command:
+
+$ npm i redux-persist
+Next, we need to modify our store, which we’ll find in the redux folder in the src directory of the cloned app. Currently, our store looks like the code below:
+
+// src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import userReducer from "./slices/userSlice";
+
+export const store = configureStore({
+  reducer: userReducer,
+  devTools: process.env.NODE_ENV !== 'production',
+})
+We’ll make the following modifications to our store.js file to use Redux Persist:
+
+// src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import userReducer from "./slices/userSlice";
+import storage from 'redux-persist/lib/storage';
+import { persistReducer, persistStore } from 'redux-persist';
+import thunk from 'redux-thunk';
+
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, userReducer)
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  devTools: process.env.NODE_ENV !== 'production',
+  middleware: [thunk]
+})
+
+export const persistor = persistStore(store)
+
+For More Details : https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/
+
+2. The link which is provided to us for fake server is https://my-json-server.typicode.com/
+
+But the problem is it has data limit thats why I have not used it instead I have used json-server@0.17.0 library
+
+Link : https://www.npmjs.com/package/json-server/v/0.17.0
+
+I have created my own db.json file and follow mention in the above link
+
+$ npm install json-server --save-dev
+// server.js
+const jsonServer = require('json-server')
+const server = jsonServer.create()
+const router = jsonServer.router('db.json')
+const middlewares = jsonServer.defaults()
+
+server.use(middlewares)
+server.use(router)
+server.listen(3000, () => {
+  console.log('JSON Server is running')
+})
+$ node server.js
+
