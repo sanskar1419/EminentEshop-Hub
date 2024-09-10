@@ -1,6 +1,6 @@
-# E Commerce Application
+# EminentEshop Hub Application
 
-E Commerce Application is simple application in which user can do almost all e commerce activity
+EminentEshop Hub is a stunning and interactive e-commerce application, providing essential functionalities such product listing, update, deletion and comprehensive search feature.
 
 ## Tech Stack
 

@@ -189,7 +189,7 @@ function Navbar() {
         <div className="navbar-center">
           {/* Redirecting to home page */}
           <Link to="/" className="btn btn-ghost text-2xl font-extrabold">
-            E Commerce
+            EminentEshop Hub
           </Link>
         </div>
         <div className="navbar-end">
