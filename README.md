@@ -109,11 +109,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Home(List of all Products)
 
-![Home](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/product%20page.png?raw=true)
-
-### Home Page With Edit and Delete Button
-
-![Home Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/edit%20and%20delete.png?raw=true)
+![Home](<https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/React-Redux-App%20(3).png?raw=true>)
 
 ### Home Page With Filter Products based on price
 
@@ -121,15 +117,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Product Detail Page
 
-![Product Detail Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/Details%20Page.png?raw=true)
-
-### Add Product Page
-
-![Add Product Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/new%20product.png?raw=true)
-
-### Update Product Page
-
-![Update Product Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/Update%20Page.png?raw=true)
+![Product Detail Page](<https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/React-Redux-App%20(2).png?raw=true>)
 
 ### No Items in cart page
 
@@ -137,4 +125,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Cart Page
 
-![Cart Page](https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/cart.png?raw=true)
+![Cart Page](<https://github.com/sanskar1419/Project_Screenshot/blob/master/E%20Commerce%20App/React-Redux-App%20(1).png?raw=true>)
